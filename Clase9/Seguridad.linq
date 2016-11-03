@@ -1,6 +1,6 @@
 <Query Kind="Program">
-  <Reference Relative="Datos.dll">D:\DESARROLLO\CURSO_EMPLEARTEC\src_git\Clase9\Datos.dll</Reference>
-  <Reference Relative="Newtonsoft.Json.dll">D:\DESARROLLO\CURSO_EMPLEARTEC\src_git\Clase9\Newtonsoft.Json.dll</Reference>
+  <Reference Relative="Datos.dll">&lt;MyDocuments&gt;\DESARROLLO\EMPLEARTEC\Clase9\Datos.dll</Reference>
+  <Reference Relative="Newtonsoft.Json.dll">&lt;MyDocuments&gt;\DESARROLLO\EMPLEARTEC\Clase9\Newtonsoft.Json.dll</Reference>
   <Namespace>Datos</Namespace>
 </Query>
 
@@ -8,8 +8,8 @@ void Main()
 {
   Database db = new Database();
   
-  //  db.Provincias.Dump();
-  db.TiposContacto.Dump();
+  db.Provincias.Dump();
+  //	db.TiposContacto.Dump();
 }
 
 
@@ -97,6 +97,3 @@ public class TipoContacto
   /// </summary>
   public string RegExp { get; set; }
 }
-
-
-
