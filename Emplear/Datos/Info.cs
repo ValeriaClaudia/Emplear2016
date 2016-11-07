@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
-using  Newtonsoft.Json.Utilities;
+using Newtonsoft.Json;                  // me permite trabajar con objetos JSON
+using Newtonsoft.Json.Utilities;
 
 namespace Datos
 {
@@ -19,7 +19,8 @@ namespace Datos
 
       if (Localidades == null)
       {
-        Localidades = JsonConvert.DeserializeObject<List<Localidad>>(localidades);
+        Localidades = JsonConvert.DeserializeObject<List<Localidad>>(localidades);  // convierte todos los elementos JSON 
+                                                                                    // a la lista de localidades de C#
       }
 
       if (Provincias == null)
@@ -35,7 +36,13 @@ namespace Datos
 
     public static List<Provincia> Provincias { get; private set; }
 
-    private static string localidades = @"[
+
+        // dentro de la cadena literal va doble comilla para que aparezcan
+        // el formato de cada localidad se denomina JSON (JavaScript Object Notation)
+        // el formato es claro y visible pero al no tener metadatos se repite todas las veces, aunque 
+        // esto último lo hace altamente flexible.
+
+    private static string localidades = @"[         
       {
         ""IDLocalidad"": 1111,
         ""Nombre"": ""CABEZA DE CHANCHO"",
